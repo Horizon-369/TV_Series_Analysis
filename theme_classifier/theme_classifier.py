@@ -80,5 +80,7 @@ class ThemeClassifier():
         return df
     
 # friendship,hope,sacrifice,battle,self development,betrayal,love,dialogue
-# D:\Programming\MachineLearning\ML Project\TV_Series_Analysis\data\Subtitles
-# D:\Programming\MachineLearning\ML Project\TV_Series_Analysis\stubs\theme_classifier_output.csv
+# D:\Programming\MachineLearning\ML_Project\TV_Series_Analysis\data\Subtitles
+# D:\Programming\MachineLearning\ML_Project\TV_Series_Analysis\stubs\theme_classifier_output.csv
+
+# D:\Programming\MachineLearning\ML_Project\TV_Series_Analysis\stubs\ner_output.csv
