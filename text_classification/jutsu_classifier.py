@@ -60,7 +60,7 @@ class JutsuClassifier():
         self.model = self.load_model(self.model_path)
 
     def load_model(self,model_path):
-        model = pipeline('text-classification', model=model_path, return_all_scores=True)
+        model = pipeline('text-classification', model=model_path, top_k=None)
         return model
 
     def train_model(self, train_data,test_data,class_weights):
