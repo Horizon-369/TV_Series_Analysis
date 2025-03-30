@@ -5,3 +5,6 @@ gradio
 pyvis
 evaluate
 python-dotenv
+git+https://github.com/huggingface/peft.git
+trl
+bitsandbytes
