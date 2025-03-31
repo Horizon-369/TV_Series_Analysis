@@ -2,7 +2,6 @@
 *.ipynb_checkpoints
 .env
 *__pycache__/
-data/
 Kshitij-369/
 wandb/
 results/
