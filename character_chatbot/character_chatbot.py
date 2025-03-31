@@ -22,7 +22,7 @@ class CharacterChatBot():
 
     def __init__(self,
                  model_path,
-                 data_path="/content/data/naruto.csv",
+                 data_path="D:\Programming\MachineLearning\ML_Project\TV_Series_Analysis\data\data_naruto.csv",
                  huggingface_token = None
                  ):
         
@@ -115,6 +115,10 @@ class CharacterChatBot():
 
         toknizer = AutoTokenizer.from_pretrained(base_model_name_or_path)
         toknizer.pad_token = toknizer.eos_token
+        
+        # Format dataset with proper formatting function
+        def formatting_func(example):
+            return example["prompt"]
 
         lora_alpha = 16
         lora_dropout = 0.1
@@ -145,15 +149,11 @@ class CharacterChatBot():
         report_to = "none"
         )
 
-        max_seq_len = 512
-
         trainer = SFTTrainer(
             model = model,
             train_dataset=dataset,
             peft_config=peft_config,
-            dataset_text_field="prompt",
-            max_seq_length=max_seq_len,
-            tokenizer=toknizer,
+            formatting_func=formatting_func,
             args = training_arguments,
         )
 
